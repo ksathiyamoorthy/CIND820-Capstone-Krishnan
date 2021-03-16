@@ -1,0 +1,27 @@
+#rm(list = ls())
+#list.files()
+graphics.off()
+setwd("E:/CIND820/New folder/Mechandise export")
+Data<- read.csv(file='us_trademerchbalance_csvn.csv', header = FALSE)
+Data<-(Data[,2:73])
+dim(Data)
+Data <- na.omit(Data)
+dim(Data)
+#head(Data,2:2)
+#head(Data, 3)
+#tail(Data)
+#summary(Data)
+#str(Data)
+nrow(Data)
+ncol(Data)
+dim(Data)
+#par(mar=rep(2,4))
+#par(mar=c(1,1,1,1))
+plot(t(Data[1,]), t(Data[4,]), main="World Economy", 
+     xlab="Year", ylab="World Economy", type="o", col="blue")
+#plot(t(Data[1,1:10]),t(Data[4,1:10]))
+#plot(Data[1,],Data[4,])
+#dev.off()
+
+
+
